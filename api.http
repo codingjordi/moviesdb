@@ -1,0 +1,34 @@
+### Recuperar todas las películas
+GET http://localhost:1234/movies
+
+### Recuperar una película por id
+GET http://localhost:1234/movies/706242e4-b32a-11ef-8c6f-03e5728d6d79
+### Recuperar todas las películas por un género
+GET http://localhost:1234/movies?genre=ACTION
+
+### Crear una película con POST
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "title": "Barbie",
+  "year": 2024,
+  "director": "Who Cares",
+  "duration": 175,
+  "poster": "https://img.fruugo.com/product/4/49/14441494_max.jpg",
+  "genre": [
+    "Comedy",
+    "Drama"
+  ]
+}
+
+### Borrar peli por id
+DELETE http://localhost:1234/movies/8d8cf32a-756f-4038-a965-008e95972eec
+
+### Actualizar una película
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+  "year": 2024
+}
